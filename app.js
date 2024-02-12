@@ -26,6 +26,14 @@ app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });
 
-// Function to generate random DNA sequence (replace with your actual implementation)
+// Function to generate random DNA sequence
 function generateRandomDNA(length, gcPercentage, includeStartSequence, includeStopSequence) {
+    const gcCount = Math.round(length * gcPercentage / 100);
+    const atCount = length - gcCount;
+    const gcSequence = 'GC'.repeat(gcCount / 2);
+    const atSequence = 'AT'.repeat(atCount / 2);
+    const sequence = gcSequence + atSequence;
+    const randomSequence = sequence.split('').sort(() => Math.random() - 0.5).join('');
+
+    return (includeStartSequence ? 'ATG' : '') + randomSequence + (includeStopSequence ? 'TAA' : '');
 }

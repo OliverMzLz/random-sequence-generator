@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random DNA Sequence Generator</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+    }
+
+    input[type="number"] {
+      width: 50px;
+      margin-right: 10px;
+    }
+
+    button {
+      padding: 5px 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .result {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Random DNA Sequence Generator</h1>
+  <form id="dna-form">
+    <label for="sequence-length">Sequence Length:</label>
+    <input type="number" id="sequence-length" value="100" min="1">
+    <br>
+    <label for="gc-percentage">GC Percentage:</label>
+    <input type="number" id="gc-percentage" value="50" min="0" max="100">
+    <br>
+    <label for="include-start-sequence">
+      <input type="checkbox" id="include-start-sequence" checked> Include Start Sequence (ATG)
+    </label>
+    <br>
+    <label for="include-stop-sequence">
+      <input type="checkbox" id="include-stop-sequence" checked> Include Stop Sequence (Random)
+    </label>
+    <br>
+    <button type="button" onclick="generateSequence()">Generate Random Sequence</button>
+  </form>
+  <p class="result"></p>
+
+  <script>
+    function generateSequence() {
+
+    }
+  </script>
+</body>
+</html>
