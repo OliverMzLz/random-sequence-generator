@@ -8,7 +8,6 @@
     <style>
         body {
             font-family: sans-serif;
-            margin: 20px;
         }
 
         input[type="number"] {
@@ -29,26 +28,56 @@
             font-weight: bold;
             margin-top: 20px;
         }
+
+        #dna-form {
+            color: white;
+            padding: 20px;
+            width: 500px;
+            background-color: rgb(20, 20, 20);
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        #dna-form div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        #dna-form label {
+            font-size: larger;
+        }
+
+        #dna-form div input {
+            width: 100px;
+            padding: 10px;
+            border-radius: 3px;
+            border: none;
+        }
     </style>
 </head>
 
 <body>
-    <h1>Random DNA Sequence Generator</h1>
+
     <form id="dna-form">
-        <label for="sequence-length">Sequence Length:</label>
-        <input type="number" id="sequence-length" value="100" min="1">
-        <br>
-        <label for="gc-percentage">GC Percentage:</label>
-        <input type="number" id="gc-percentage" value="50" min="0" max="100">
-        <br>
+        <h2>Random DNA Sequence Generator</h2>
+        <div>
+            <label for="sequence-length">Sequence Length</label>
+            <input type="number" id="sequence-length" value="100" min="1">
+        </div>
+        <div>
+            <label for="gc-percentage">GC Percentage</label>
+            <input type="number" id="gc-percentage" value="50" min="0" max="100">
+        </div>
         <label for="include-start-sequence">
             <input type="checkbox" id="include-start-sequence" checked> Include Start Sequence (ATG)
         </label>
-        <br>
+        <br><br>
         <label for="include-stop-sequence">
             <input type="checkbox" id="include-stop-sequence" checked> Include Stop Sequence (Random)
         </label>
-        <br>
+        <br><br>
         <button type="button" onclick="generateSequence()">Generate Random Sequence</button>
     </form>
     <p class="result"></p>
