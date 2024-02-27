@@ -12,6 +12,8 @@ node app.js
 ## UML
 
 ![UML](./UML.png)
+![image](https://github.com/OliverMzLz/random-sequence-generator/assets/127792816/e4874341-f0e9-49a3-a478-b09f00f21116)
+
 
 ## How to run
 
